@@ -32,10 +32,17 @@ function Home({data}) {
   const [arrDate,setArrDate] = useState('')
   const [month,setMonth] = useState(dayjs().format(`MM`))
   const [year,setyear] = useState(dayjs().format(`YYYY`))
+  // useEffect(()=>{
+  //   const date = new Date(dateCurrent);
+  //   const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+  //   const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+  //   setFirstDate(firstDay);
+  //   setLasteDate(lastDay)
+  // },[dateCurrent])
   useEffect(()=>{
-    const date = new Date(dateCurrent);
-    const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-    const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    const firstDay = 'Fri Apr 01 2022 00:00:00 GMT+0700 (GMT+07:00)'
+    const lastDay = 'Sat Apr 30 2022 00:00:00 GMT+0700 (GMT+07:00)'
+    setFirstDate1('16/04/2022')
     setFirstDate(firstDay);
     setLasteDate(lastDay)
   },[dateCurrent])
